@@ -29,5 +29,9 @@ RUN cd ${SOFT} && wget https://github.com/samtools/bcftools/releases/download/1.
 RUN cd ${SOFT} && wget https://github.com/vcftools/vcftools/releases/download/v0.1.16/vcftools-0.1.16.tar.gz && \
  tar xf vcftools-0.1.16.tar.gz && cd vcftools-0.1.16 && ./configure --prefix ${SOFT}/vcftools-0.1.16  && make -j$(nproc) && make install 
 
+ENV PATH="${PATH}:${SOFT}/htslib-1.20:${SOFT}/samtools-1.20:${SOFT}/vcftools-0.1.16/bin:${SOFT}/bcftools-1.20"
+ENV SAMTOOLS=${SOFT}/samtools-1.20/samtools
+ENV VCFTOOLS=${SOFT}/vcftools-0.1.16/bin/vcftools
+ENV BCFTOOLS=${SOFT}/bcftools-1.20/bcftools
 
 ENTRYPOINT ["/bin/bash"]
