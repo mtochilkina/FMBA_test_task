@@ -34,6 +34,9 @@ ENV SAMTOOLS=${SOFT}/samtools-1.20/samtools
 ENV VCFTOOLS=${SOFT}/vcftools-0.1.16/bin/vcftools
 ENV BCFTOOLS=${SOFT}/bcftools-1.20/bcftools
 
+RUN ["/bin/bash", "-c", "yes | unminimize"]
+RUN apt-get update && apt-get install -y man-db  # in order to enable "man vcftools" command
+
 # Clean cash and temporary files
 RUN apt-get clean && rm /soft/*.tar.*
 
