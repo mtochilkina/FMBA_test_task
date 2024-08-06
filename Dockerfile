@@ -34,4 +34,7 @@ ENV SAMTOOLS=${SOFT}/samtools-1.20/samtools
 ENV VCFTOOLS=${SOFT}/vcftools-0.1.16/bin/vcftools
 ENV BCFTOOLS=${SOFT}/bcftools-1.20/bcftools
 
+# Clean cash and temporary files
+RUN apt-get clean && rm /soft/*.tar.*
+
 ENTRYPOINT ["/bin/bash"]
