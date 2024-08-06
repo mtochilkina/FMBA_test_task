@@ -40,7 +40,11 @@ log_file	: detect_ref.log
 
 ## Input file preprocessing
 
-Following commands convert FP_SNPs.txt to <#CHROM<TAB>POS<TAB>ID<TAB>allele1<TAB>allele2> format. Resulted file - FP_SNPs_10k_GB38_twoAllelsFormat.tsv. 
+Following commands convert FP_SNPs.txt to 
+```
+<#CHROM<TAB>POS<TAB>ID<TAB>allele1<TAB>allele2> format. 
+```
+Resulted file - FP_SNPs_10k_GB38_twoAllelsFormat.tsv. 
 ```bash
 cut -f3 --complement FP_SNPs.txt > intermediate.txt  # remove column with GRCh37 coordinates
 sed -i '1!s/^/rs/' intermediate.txt            # add "rs" to variant ID
@@ -64,7 +68,7 @@ For each variant in FP_SNPs_10k_GB38_twoAllelsFormat.tsv:
 		Write variant to failed_detection.tsv  
 ```
 
-###Results
+### Results
 detect_ref.py successfully recognized reference allele for 9991 variants. 
 The script failed to detect reference allele for 9 variants, since nucleotides retrieved from reference genome didn't match with any of 2 alleles.
 These 9 variants with all data from input file are listed in **failed_detection.tsv** as well as the reference nucleotide retrieved from the genome.

@@ -1,0 +1,17 @@
+2024-08-06 20:16:17,970 - INFO - Input file: FP_SNPs_10k_GB38_twoAllelsFormat.tsv
+2024-08-06 20:16:17,970 - INFO - Output file: FP_SNPs_10k_GB38_ref.vcf
+2024-08-06 20:16:17,970 - INFO - Path to fasta: /ref/GRCh38.d1.vd1_mainChr/sepChrs/
+2024-08-06 20:16:17,970 - INFO - noref file: failed_detection.txt
+2024-08-06 20:16:17,970 - INFO - Checking if files exist
+2024-08-06 20:16:17,971 - INFO - Header is ok
+2024-08-06 20:16:17,971 - INFO - Starting file processing
+2024-08-06 20:16:18,098 - ERROR - Failed to detect reference allele.
+2024-08-06 20:16:19,855 - ERROR - Failed to detect reference allele.
+2024-08-06 20:16:19,855 - ERROR - Failed to detect reference allele.
+2024-08-06 20:16:19,855 - ERROR - Failed to detect reference allele.
+2024-08-06 20:16:19,855 - ERROR - Failed to detect reference allele.
+2024-08-06 20:16:19,861 - ERROR - Failed to detect reference allele.
+2024-08-06 20:16:20,012 - ERROR - Failed to detect reference allele.
+2024-08-06 20:16:20,502 - ERROR - Failed to detect reference allele.
+2024-08-06 20:16:20,502 - ERROR - Failed to detect reference allele.
+2024-08-06 20:16:21,098 - INFO - Finished file processing

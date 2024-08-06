@@ -37,6 +37,13 @@ ENV BCFTOOLS=${SOFT}/bcftools-1.20/bcftools
 RUN ["/bin/bash", "-c", "yes | unminimize"]
 RUN apt-get update && apt-get install -y man-db  # in order to enable "man vcftools" command
 
+#Install dependencies for detect_ref.py
+RUN apt-get update && apt-get install -y python3 pip
+RUN pip install pysam
+
+#get detect_ref.py from github
+RUN mkdir ${SOFT}/scripts && cd ${SOFT}/scripts && wget https://raw.githubusercontent.com/mtochilkina/FMBA_test_task/main/detect_ref.py 
+
 # Clean cash and temporary files
 RUN apt-get clean && rm /soft/*.tar.*
 
